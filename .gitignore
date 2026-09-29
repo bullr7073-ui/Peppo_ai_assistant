@@ -23,3 +23,6 @@ memory_backup.json
 # OS files
 .DS_Store
 Thumbs.db
+
+# Large AI model files
+*.onnx
