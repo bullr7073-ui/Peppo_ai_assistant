@@ -1,48 +1,53 @@
-# 🤖 Peppo — Personal AI Voice Assistant
+# 🤖 Peppo — Personal AI Assistant
 
-Peppo is a personal AI voice assistant built with Python that combines
-voice interaction, AI-powered responses, text-to-speech, persistent
-memory, and multiple AI backends.
+Short 1–2 sentence description
 
 ## ✨ Features
+- 🎙️ Voice interaction
+- 🧠 Multiple AI brains
+- 💾 Persistent memory
+- 🔊 Text-to-speech
+- 👂 Speech recognition
+- 🔄 Cloud/local brain switching
+- 🖥️ Web interface
+- ...
 
-- 🎤 Speech-to-text voice interaction
-- 🧠 AI-powered conversational responses
-- 🔊 Text-to-speech responses
-- 💾 Persistent memory system
-- 🔄 Multiple AI backend support
-- ☁️ Cloud AI integration
-- 🖥️ Local AI model support
-- ⚙️ Modular Python architecture
+## 🏗️ Architecture
+Simple diagram / explanation of:
+Voice → Brain Manager → Gemini/Qwen → Memory → TTS
 
-## 🧠 How Peppo Works
+## 🛠️ Tech Stack
+Python
+FastAPI
+JavaScript/React
+Gemini API
+Ollama
+Qwen
+...
 
-```text
-                ┌──────────────┐
-                │    User      │
-                │    Voice     │
-                └──────┬───────┘
-                       ↓
-              ┌─────────────────┐
-              │ Speech-to-Text  │
-              └────────┬────────┘
-                       ↓
-              ┌─────────────────┐
-              │  Peppo Brain    │
-              │  AI Processing  │
-              └────────┬────────┘
-                       ↓
-          ┌────────────┴────────────┐
-          ↓                         ↓
-   Cloud AI Backend          Local AI Backend
-          └────────────┬────────────┘
-                       ↓
-              ┌─────────────────┐
-              │   Memory System │
-              └────────┬────────┘
-                       ↓
-              ┌─────────────────┐
-              │ Text-to-Speech  │
-              └────────┬────────┘
-                       ↓
-                 🔊 Peppo Speaks
+## 📁 Project Structure
+
+## ⚙️ Installation
+
+### 1. Clone
+### 2. Create virtual environment
+### 3. Install Python dependencies
+### 4. Install Node dependencies
+### 5. Configure `.env`
+### 6. Run Peppo
+
+## 🔐 Environment Variables
+Explain which variables are required **without showing actual API keys**.
+
+## 🧠 AI Brain System
+Explain Gemini ↔ local Qwen switching.
+
+## 💾 Memory System
+Explain how memory works while making clear that
+`memory.json` is intentionally ignored.
+
+## 🚀 Future Plans
+
+## 📸 Screenshots / Demo
+
+## 👨‍💻 Author
