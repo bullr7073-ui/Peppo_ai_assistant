@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Peppo</title>
+
+    <link
+        rel="stylesheet"
+        href="/web/style.css"
+    >
+</head>
+
+<body>
+
+<main class="peppo-app idle">
+
+    <!-- =====================================
+         PEPPO AREA
+         ===================================== -->
+
+    <div class="orb-container">
+
+        <button
+            id="orbButton"
+            class="orb-button"
+            type="button"
+            aria-label="Talk to Peppo"
+        >
+
+            <div class="orb">
+
+                <div class="orb-glow"></div>
+
+                <div class="eye eye-left"></div>
+
+                <div class="eye eye-right"></div>
+
+            </div>
+
+        </button>
+
+
+        <p id="tapText">
+            TAP TO SPEAK !
+        </p>
+
+
+        <button
+            id="cancelButton"
+            class="cancel-button"
+            type="button"
+        >
+            CANCEL
+        </button>
+
+    </div>
+
+
+    <!-- =====================================
+         CONVERSATION PANEL
+         ===================================== -->
+
+    <section
+        id="responsePanel"
+        class="response-panel"
+        aria-live="polite"
+    >
+
+        <p
+            id="responseTitle"
+            class="response-label"
+        >
+            PEPPO
+        </p>
+
+        <p id="responseText">
+            Ready when you are.
+        </p>
+
+    </section>
+
+</main>
+
+
+<script src="/web/script.js"></script>
+
+</body>
+
+</html>

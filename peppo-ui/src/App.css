@@ -1,0 +1,144 @@
+.peppo-app {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #ffe58a 0%,
+    #ffd39c 50%,
+    #ff9d72 100%
+  );
+
+  position: relative;
+}
+
+
+/* ==========================================
+   ORB
+========================================== */
+
+.orb-button {
+  border: none;
+  background: transparent;
+
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.25s ease;
+}
+
+.orb-button:hover {
+  transform: scale(1.03);
+}
+
+.orb-button:active {
+  transform: scale(0.97);
+}
+
+
+/* ==========================================
+   TAP TO SPEAK
+========================================== */
+
+.tap-text {
+  margin-top: 45px;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 32px;
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  user-select: none;
+}
+
+
+/* ==========================================
+   LISTENING UI
+========================================== */
+
+.listening-ui {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+
+.listening-text {
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  margin: 0 0 12px 0;
+
+  opacity: 0.9;
+}
+
+
+/* ==========================================
+   STOP BUTTON
+========================================== */
+
+.stop-button {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1px solid #e7e9ec;
+
+  background: white;
+
+  color: #202225;
+
+  font-size: 36px;
+  font-weight: 300;
+
+  line-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(17, 24, 39, 0.14),
+    0 1px 3px rgba(17, 24, 39, 0.10);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.stop-button:hover {
+  transform: scale(1.05);
+}
+
+
+.stop-button:active {
+  transform: scale(0.95);
+}

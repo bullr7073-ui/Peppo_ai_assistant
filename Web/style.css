@@ -1,0 +1,519 @@
+/* ==========================================
+   RESET
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+   ========================================== */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 255, 255, 0.45),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(255, 145, 90, 0.35),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffe89a 0%,
+            #ffd09a 45%,
+            #ff9974 100%
+        );
+}
+
+
+/* ==========================================
+   MAIN APP
+   ========================================== */
+
+.peppo-app {
+
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   ORB CONTAINER
+   ========================================== */
+
+.orb-container {
+
+    position: absolute;
+
+    left: 18%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    z-index: 10;
+}
+
+
+/* ==========================================
+   ORB BUTTON
+   ========================================== */
+
+.orb-button {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    outline: none;
+}
+
+
+/* ==========================================
+   ORB
+   ========================================== */
+
+.orb {
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 32% 22%,
+            #fffbd0 0%,
+            #ffe56a 17%,
+            #ffbf4d 38%,
+            #ff9758 65%,
+            #f56c54 100%
+        );
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(220, 92, 50, 0.28),
+
+        inset -25px -25px 55px
+        rgba(210, 75, 40, 0.22),
+
+        inset 18px 18px 40px
+        rgba(255, 255, 255, 0.45);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.4s ease;
+
+    animation:
+        peppoFloat 4s ease-in-out infinite;
+}
+
+
+/* ==========================================
+   ORB GLOW
+   ========================================== */
+
+.orb-glow {
+
+    position: absolute;
+
+    width: 190px;
+    height: 110px;
+
+    top: -25px;
+    left: 42px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.5);
+
+    filter: blur(25px);
+
+    transform: rotate(-20deg);
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   EYES
+   ========================================== */
+
+.eye {
+
+    position: absolute;
+
+    width: 18px;
+    height: 28px;
+
+    top: 130px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.eye-left {
+    left: 105px;
+}
+
+
+.eye-right {
+    right: 105px;
+}
+
+
+/* ==========================================
+   TAP TEXT
+   ========================================== */
+
+#tapText {
+
+    margin-top: 35px;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 2px 12px
+        rgba(120, 60, 30, 0.15);
+}
+
+
+/* ==========================================
+   CANCEL BUTTON
+   ========================================== */
+
+.cancel-button {
+
+    margin-top: 12px;
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    color: #ef7855;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(130, 60, 30, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.cancel-button:hover {
+
+    transform: translateY(-2px);
+
+    background: white;
+}
+
+
+.cancel-button:active {
+
+    transform: scale(0.95);
+}
+
+
+/* ==========================================
+   CONVERSATION PANEL
+   ========================================== */
+
+.response-panel {
+
+    position: absolute;
+
+    left: 52%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: min(
+        560px,
+        40vw
+    );
+
+    min-height: 460px;
+
+    padding: 35px;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.28),
+            rgba(255, 255, 255, 0.10)
+        );
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.55);
+
+    backdrop-filter:
+        blur(25px);
+
+    -webkit-backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+
+        0 20px 60px
+        rgba(130, 60, 30, 0.12),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.45);
+
+    color: white;
+
+    text-align: left;
+
+    overflow-y: auto;
+
+    z-index: 5;
+}
+
+
+/* ==========================================
+   RESPONSE LABEL
+   ========================================== */
+
+.response-label {
+
+    margin-bottom: 14px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    opacity: 0.75;
+}
+
+
+/* ==========================================
+   RESPONSE TEXT
+   ========================================== */
+
+#responseText {
+
+    font-size: 18px;
+
+    line-height: 1.65;
+
+    font-weight: 400;
+
+    opacity: 0.95;
+}
+
+
+/* ==========================================
+   STATES
+   ========================================== */
+
+.peppo-app.listening .orb {
+
+    animation:
+        peppoListen 0.8s ease-in-out infinite,
+        peppoGlow 1s ease-in-out infinite alternate;
+}
+
+
+.peppo-app.thinking .orb {
+
+    animation:
+        peppoThink 1s ease-in-out infinite,
+        peppoGlow 1.5s ease-in-out infinite alternate;
+}
+
+
+.peppo-app.responding .orb {
+
+    animation:
+        peppoRespond 1.2s ease-in-out infinite;
+}
+
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+@keyframes peppoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+@keyframes peppoListen {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+
+@keyframes peppoThink {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+@keyframes peppoRespond {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+
+@keyframes peppoGlow {
+
+    0% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(1.25);
+    }
+}
+
+
+/* ==========================================
+   ORB PRESS
+   ========================================== */
+
+.orb-button:active .orb {
+
+    transform: scale(0.94);
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .orb-container {
+
+        left: 50%;
+
+        top: 35%;
+
+        transform:
+            translate(-50%, -50%);
+    }
+
+
+    .response-panel {
+
+        left: 50%;
+
+        top: auto;
+
+        bottom: 25px;
+
+        transform: translateX(-50%);
+
+        width: calc(100vw - 40px);
+
+        min-height: 220px;
+    }
+}
