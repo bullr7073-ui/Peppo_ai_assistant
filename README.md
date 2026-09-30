@@ -1,6 +1,5 @@
 # 🤖 Peppo — Personal AI Assistant
 
-Short 1–2 sentence description
 
 ## ✨ Features
 - 🎙️ Voice interaction
